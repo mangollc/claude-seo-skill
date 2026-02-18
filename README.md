@@ -1,4 +1,4 @@
-# Claude SEO Skill
+# SEO AEO Pro
 
 Your AI-powered SEO assistant. Just type simple commands and get professional-grade SEO analysis, keyword research, content scoring, and more — no SEO expertise required.
 
@@ -42,7 +42,7 @@ Open your terminal and run these two commands:
 
 ```
 claude plugin marketplace add mangollc/claude-seo-skill
-claude plugin install seo-aeo@claude-seo-skill
+claude plugin install seo-aeo-pro@claude-seo-skill
 ```
 
 That's it. The SEO tools are now available everywhere on your computer.

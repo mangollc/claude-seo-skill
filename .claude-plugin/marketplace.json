@@ -1,17 +1,17 @@
 {
-  "name": "claude-seo-skill",
+  "name": "seo-aeo-pro",
   "owner": {
     "name": "mangollc"
   },
   "metadata": {
-    "description": "Comprehensive SEO and AEO (AI Engine Optimization) toolkit for agencies",
+    "description": "SEO AEO Pro — Professional SEO and AI search optimization toolkit for agencies",
     "version": "1.0.0"
   },
   "plugins": [
     {
-      "name": "seo-aeo",
+      "name": "seo-aeo-pro",
       "source": "./",
-      "description": "Comprehensive SEO and AI search optimization toolkit for agencies. Keyword research, technical audits, content optimization, local SEO, backlink analysis, and AEO.",
+      "description": "SEO AEO Pro — Professional SEO and AI search optimization toolkit for agencies. Keyword research, technical audits, content optimization, local SEO, backlink analysis, and AEO.",
       "version": "1.0.0",
       "author": {
         "name": "mangollc"
