@@ -1,0 +1,24 @@
+{
+  "name": "seo-aeo",
+  "description": "Comprehensive SEO and AI search optimization toolkit for agencies. Keyword research, technical audits, content optimization, local SEO, backlink analysis, and AEO (AI Engine Optimization). Multi-client support with structured data output.",
+  "version": "1.0.0",
+  "author": {
+    "name": "SEO Agency"
+  },
+  "license": "MIT",
+  "keywords": [
+    "seo",
+    "aeo",
+    "keywords",
+    "backlinks",
+    "technical-seo",
+    "local-seo",
+    "content-optimization",
+    "schema-markup",
+    "ai-search",
+    "google-business-profile",
+    "agency"
+  ],
+  "skills": "./skills/",
+  "commands": "./commands/"
+}

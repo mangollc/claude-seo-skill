@@ -1,0 +1,15 @@
+# SEO working data (client-specific, not for version control)
+.seo/
+
+# Firecrawl working data
+.firecrawl/
+
+# Firebase
+firebase-debug.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Claude Code local settings
+.claude/
