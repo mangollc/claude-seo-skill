@@ -1,226 +1,289 @@
 # Claude SEO Skill
 
-A comprehensive SEO and AEO (AI Engine Optimization) plugin for [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Built for agencies managing multiple clients. Covers keyword strategy, technical audits, content optimization, local SEO, backlinks, and AI search optimization.
+Your AI-powered SEO assistant. Just type simple commands and get professional-grade SEO analysis, keyword research, content scoring, and more — no SEO expertise required.
 
-## Features
+Works with any website. Built for agencies managing multiple clients.
 
-- **6 Skills** with deep, actionable workflows
-- **13 Slash Commands** for quick actions
-- **Multi-Client Support** with organized data per client
-- **Revenue-Focused** keyword research (not vanity metrics)
-- **AI Search Ready** optimization for Google AI Overviews, Perplexity, and ChatGPT
-- **Agency Reporting** with reusable monthly report templates
+---
 
-## Installation
+## What Can It Do?
 
-### Prerequisites
+**Think of it as having an SEO expert on your team that works instantly.**
 
-- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) installed
-- [Firecrawl CLI](https://firecrawl.dev) for web scraping:
+- **Check your website's health** — find and fix technical problems hurting your Google rankings
+- **Find the right keywords** — discover what your customers are actually searching for
+- **Score any page** — get a 0-100 SEO score with a clear list of what to fix
+- **See how Google shows your page** — preview your search result before publishing
+- **Create social posts** — generate a full month of Google Business Profile posts
+- **Build link strategies** — find where competitors get their backlinks and create outreach plans
+- **Get found in AI search** — optimize for Google AI Overviews, Perplexity, and ChatGPT
+- **Monthly reports** — auto-generate professional SEO reports for clients
 
-```bash
-npm install -g firecrawl-cli
-firecrawl login --browser
+---
+
+## Getting Started
+
+### What You Need
+
+1. **Claude Code** — the AI coding assistant from Anthropic
+   - Install it: https://docs.anthropic.com/en/docs/claude-code
+
+2. **Firecrawl** — used behind the scenes to read websites
+   - Open your terminal and run:
+   ```
+   npm install -g firecrawl-cli
+   firecrawl login --browser
+   ```
+   (A browser window will open — just sign in and you're done)
+
+### Install This Plugin
+
+Open your terminal and run these two commands:
+
+```
+claude plugin marketplace add mangollc/claude-seo-skill
+claude plugin install seo-aeo@claude-seo-skill
 ```
 
-### Install the Plugin
+That's it. The SEO tools are now available everywhere on your computer.
 
-**Option 1: Install from GitHub (recommended)**
+---
 
-```bash
-claude plugin add mangollc/claude-seo-skill
+## How to Use It
+
+### Step 1: Open Claude Code
+
+Open your terminal (or the terminal inside VS Code, Cursor, or any code editor) and type:
+
 ```
-
-**Option 2: Clone and use directly**
-
-```bash
-git clone https://github.com/mangollc/claude-seo-skill.git
-cd claude-seo-skill
 claude
 ```
 
-**Option 3: Add to an existing project**
-
-```bash
-cd /path/to/your-project
-claude plugin add mangollc/claude-seo-skill
-```
-
-## Quick Start
+### Step 2: Set Up Your First Client
 
 ```
-1. /new-client "My Business"          Set up client profile + initial site crawl
-2. /audit https://mybusiness.com      Full technical SEO audit (scored 0-100)
-3. /keywords "target topic" --local   Keyword research with clustering
-4. /score-page https://url "keyword"  On-page SEO score with fix list
-5. /report "my-business"              Monthly SEO report
+/new-client "Joe's Plumbing"
 ```
 
-## Commands
+Claude will ask you a few questions:
+- What's the website URL?
+- What type of business is it? (local, online software, online store, etc.)
+- Who are 2-3 competitors?
 
-| Command | Arguments | Description |
-|---------|-----------|-------------|
-| `/new-client` | `{name}` | Create a new client profile with directory structure and initial site crawl |
-| `/audit` | `{url}` | Full technical SEO audit: crawlability, meta tags, schema, internal links, CWV, speed, mobile |
-| `/keywords` | `{topic} [--local\|--saas]` | Revenue-focused keyword research with clustering, intent mapping, and difficulty scoring |
-| `/topic-map` | `{client} {topic}` | Build a topical authority map with pillar pages and cluster content architecture |
-| `/score-page` | `{url} {keyword}` | Score a page's on-page SEO (0-100) across 10 categories with actionable fixes |
-| `/serp-preview` | `{url}` | Preview how a page appears in Google search results + rich snippet eligibility check |
-| `/cannibalization` | `{client}` | Find pages competing for the same keywords with merge/differentiate/canonical recommendations |
-| `/content-decay` | `{client}` | Detect stale or declining content with prioritized refresh recommendations |
-| `/gbp-calendar` | `{client}` | Generate a 30-day Google Business Profile posting calendar with ready-to-publish posts |
-| `/schema` | `{url} [type]` | Generate valid JSON-LD structured data (auto-detects page type if not specified) |
-| `/aeo-check` | `{brand} {queries...}` | Check brand visibility in AI search engines (Google AI Overview, Perplexity, ChatGPT) |
-| `/brand-serp` | `{brand}` | Analyze and optimize what appears when someone searches your brand name |
-| `/report` | `{client} [month]` | Generate a monthly SEO report from all collected data with trends and action items |
+### Step 3: Start Using Commands
 
-## Skills
+Just type any command. Here are the most popular ones:
 
-### 1. Keyword Strategy (`seo-keywords`)
+---
 
-Two distinct workflows depending on business model:
+## All Commands
 
-**Local/Service Businesses:**
-- Geo-modified keyword discovery (service + city combinations)
-- Competitor keyword extraction from local SERPs
-- Revenue-mapped keyword prioritization
-- "Near me" and hyperlocal variants
+### Setting Up
 
-**SaaS/Online Companies:**
-- Product-led keyword discovery
-- BOFU/MOFU/TOFU funnel classification
-- Feature vs problem keyword mapping
-- Comparison and alternative keywords
+| Type this | What it does |
+|-----------|-------------|
+| `/new-client "Business Name"` | Set up a new client for tracking |
 
-**Both workflows include:**
-- Keyword clustering by SERP overlap
-- Search intent classification (transactional, commercial, informational, navigational)
-- Difficulty scoring (1-10) via SERP analysis
-- Topical authority mapping (pillar + cluster architecture)
-- SERP feature analysis (Featured Snippets, PAA, AI Overview, etc.)
-- Competitor content strategy reverse engineering
-- Programmatic SEO templates (location pages, comparison pages, category pages)
+### Analyzing Your Website
 
-### 2. Technical SEO Audit (`seo-technical-audit`)
+| Type this | What it does |
+|-----------|-------------|
+| `/audit https://yoursite.com` | Full website health check with a score out of 100 and a prioritized fix list |
+| `/score-page https://yoursite.com/page "your keyword"` | Score a specific page's SEO (0-100) and tell you exactly what to fix |
+| `/serp-preview https://yoursite.com/page` | Show what your page looks like in Google search results |
+| `/cannibalization "client-name"` | Find pages on your site that compete against each other (hurting both) |
+| `/content-decay "client-name"` | Find old content that needs updating |
 
-Full site health assessment scored 0-100:
+### Finding Keywords
 
-- **Crawlability**: URL discovery, orphan pages, status codes, redirect chains
-- **Robots.txt & Sitemap**: validation, cross-referencing
-- **HTTP Headers**: canonical, X-Robots-Tag, security, caching
-- **Meta Tags**: title, description, canonical, Open Graph, Twitter Cards, hreflang, robots directives
-- **Schema/JSON-LD**: validation + generation (LocalBusiness, Article, Product, FAQ, HowTo, Organization, BreadcrumbList, WebSite)
-- **Internal Linking**: link graph, orphan pages, link depth, anchor text distribution
-- **Core Web Vitals**: LCP, CLS, INP via PageSpeed Insights API
-- **Page Speed Playbook**: render-blocking resources, image compression, critical CSS, font loading, third-party scripts
-- **Image Optimization**: alt text, format (WebP), lazy loading, responsive images, dimensions
-- **Mobile Friendliness**: viewport, responsive, tap targets, font sizes
-- **SERP Feature Eligibility**: FAQ, How-to, Review Stars, Breadcrumbs, Sitelinks, Video, Product
-- **Crawl Budget Analysis**: thin content, duplicate content, faceted navigation, parameter handling
-- **International SEO**: hreflang audit, language targeting, URL structure recommendations
-- **Cannibalization Detection**: pages competing for same keywords with fix recommendations
+| Type this | What it does |
+|-----------|-------------|
+| `/keywords "plumber austin" --local` | Find keywords for a local business |
+| `/keywords "project management" --saas` | Find keywords for an online software company |
+| `/topic-map "client-name" "main topic"` | Plan your entire content strategy around a topic |
 
-### 3. Content Optimization (`seo-content`)
+### Creating Content
 
-**On-Page Scoring (0-100 rubric):**
+| Type this | What it does |
+|-----------|-------------|
+| `/schema https://yoursite.com/page` | Generate structured data code (helps Google understand your page) |
+| `/gbp-calendar "client-name"` | Create a full month of Google Business Profile posts, ready to copy-paste |
 
-| Category | Points | What's Checked |
-|----------|--------|----------------|
-| Title Tag | 15 | Length, keyword position, uniqueness, SERP truncation |
-| Meta Description | 10 | Length, CTA, keyword, uniqueness |
-| H1 Tag | 10 | Single H1, contains keyword |
-| Heading Hierarchy | 10 | Proper nesting, keywords in subheadings |
-| Content Depth | 15 | Word count vs competitors, topic coverage |
-| Keyword Usage | 10 | Density, first 100 words, LSI/semantic terms |
-| Internal Links | 10 | Min 3, relevant anchors, pillar links |
-| Image Optimization | 10 | Alt text, format, lazy loading, dimensions |
-| URL Structure | 5 | Length, keyword, no parameters |
-| Social Meta | 5 | OG tags, Twitter Cards |
+### AI Search Visibility
 
-**Also includes:**
-- SERP preview generator (title truncation, description preview, rich snippet check)
-- Content readability analysis (Flesch-Kincaid grade level)
-- E-E-A-T analysis (Experience, Expertise, Authoritativeness, Trustworthiness)
-- Featured snippet optimization (paragraph, list, table formats)
-- Content gap analysis vs competitors
-- Content decay detection (outdated stats, stale references, thin content)
-- Pre-publish checklist (comprehensive markdown template)
-- Title/meta description generator (3-5 optimized options)
+| Type this | What it does |
+|-----------|-------------|
+| `/aeo-check "Your Brand" "keyword1" "keyword2"` | Check if your brand shows up in AI search results (Google AI, Perplexity, ChatGPT) |
+| `/brand-serp "Your Brand"` | See what appears when someone Googles your brand name |
 
-### 4. Local SEO (`seo-local`)
+### Reporting
 
-- **GBP Post Generation**: 5 post types (What's New, Offer, Event, Product Highlight, Educational)
-- **30-Day Posting Calendar**: 12-16 posts/month, rotating services and areas, seasonal relevance
-- **NAP Consistency Audit**: check Name, Address, Phone across major directories
-- **Local Citation Audit**: 50+ citation sources organized by industry (home services, restaurants, healthcare, legal, real estate, automotive)
-- **Review Response Templates**: 5 positive + 5 negative response templates with personalization
-- **Local Keyword Optimization**: geo-modified variants mapped to landing pages
+| Type this | What it does |
+|-----------|-------------|
+| `/report "client-name"` | Generate a professional monthly SEO report |
 
-### 5. Backlinks & Reporting (`seo-backlinks`)
+---
 
-- **Competitor Backlink Profiling**: discover link sources via brand mentions, guest posts, directories
-- **Link Opportunity Scoring**: 0-100 score across relevance, authority, achievability, traffic potential
-- **90-Day Outreach Plan**:
-  - Phase 1 (Days 1-30): directories, unlinked mentions, broken links
-  - Phase 2 (Days 31-60): guest posts, resource pages, HARO, podcasts
-  - Phase 3 (Days 61-90): digital PR, data-driven content, partnerships
-- **Outreach Email Templates**: guest post pitch, unlinked mention, broken link outreach
-- **Toxic Backlink Identification**: PBN detection, spam patterns, disavow file generation
-- **Unlinked Mention Discovery**: find brand mentions without links
-- **Monthly Reporting Framework**: reusable template with executive summary, metrics, trends, action items
+## Examples
 
-### 6. AI Search Optimization (`seo-aeo`)
-
-- **Google AI Overview Optimization**: analyze cited sources, content formatting for citation
-- **Perplexity Citation Optimization**: factual accuracy, structured content, source credibility
-- **ChatGPT/Bing Optimization**: entity signals, Wikipedia/Wikidata presence, Bing SEO
-- **AI-Focused Structured Data**: FAQPage, HowTo, DefinedTerm, speakable, Organization with sameAs
-- **FAQ & Entity Optimization**: People Also Ask mining, entity-first writing
-- **Brand Authority Signals Audit**: Knowledge Panel, Wikipedia, social profiles, news coverage
-- **Brand SERP Management**: analyze page 1 of brand search, owned vs unowned results, sentiment
-- **Per-Page AEO Checklist**: 100-point scoring across 11 AI-readiness factors
-
-## Multi-Client Data Structure
-
-All working data is stored in `.seo/` (gitignored):
+### "I want to check if my website has SEO problems"
 
 ```
-.seo/
-├── config.json                    # Agency-level defaults
-└── clients/{client-slug}/
-    ├── config.json                # Client profile (domain, competitors, business type)
-    ├── keywords/                  # Research, clusters, topic maps
-    ├── technical/                 # Audit results, schema markup, CWV data
-    │   └── schema-markup/         # Generated JSON-LD files
-    ├── content/                   # Page scores, content gaps, decay reports
-    ├── local/                     # GBP posts, calendars, NAP audit
-    │   └── gbp-posts/
-    ├── backlinks/                 # Competitor profiles, outreach plans
-    ├── aeo/                       # AI search audits, entity data
-    └── reports/                   # Monthly and quarterly reports
+/audit https://mywebsite.com
 ```
 
-## Supported Business Types
+You'll get:
+- An overall health score (0-100)
+- Category-by-category breakdown
+- A prioritized list of fixes (most impactful first)
 
-- **Local/Service Businesses** (plumbers, lawyers, dentists, restaurants, etc.)
-- **SaaS Companies** (software products, online tools)
-- **E-commerce** (online stores, product catalogs)
-- **Publishers** (blogs, news sites, content sites)
+### "I want to find keywords my customers are searching for"
 
-## How It Works
+```
+/keywords "emergency plumber austin" --local
+```
 
-This plugin provides Claude Code with detailed SEO workflows and instructions. When you invoke a command or skill, Claude:
+You'll get:
+- A list of keywords people actually search for
+- How hard each keyword is to rank for
+- Which keywords will bring the most revenue
+- Groups of related keywords you should target together
 
-1. Loads your client configuration from `.seo/clients/{slug}/config.json`
-2. Uses **Firecrawl CLI** to scrape, crawl, and search the web
-3. Analyzes the data following the skill's methodology
-4. Saves structured results (JSON) and readable reports (Markdown) to `.seo/`
-5. Presents findings with scores, prioritized recommendations, and next steps
+### "I want to score a specific page"
+
+```
+/score-page https://mysite.com/services "plumber austin"
+```
+
+You'll get:
+- A score out of 100
+- Breakdown: title tag, meta description, headings, content depth, images, links, etc.
+- The top 5 things to fix to improve your ranking
+
+### "I need Google Business Profile posts for the month"
+
+```
+/gbp-calendar "joes-plumbing"
+```
+
+You'll get:
+- 12-16 ready-to-publish posts for the entire month
+- Mix of tips, offers, updates, and service highlights
+- Each post includes suggested photos and calls-to-action
+
+### "I want to know if AI search engines mention my brand"
+
+```
+/aeo-check "Joe's Plumbing" "best plumber austin" "emergency plumber near me"
+```
+
+You'll get:
+- Whether your brand appears in Google AI Overviews
+- Which competitors show up instead
+- What to change so AI search engines recommend you
+
+---
+
+## Works With Any Business Type
+
+| Business Type | Example Commands |
+|---------------|-----------------|
+| **Local businesses** (plumbers, lawyers, dentists) | `/keywords "dentist chicago" --local` then `/gbp-calendar "client"` |
+| **Online software (SaaS)** | `/keywords "project management tool" --saas` then `/topic-map "client" "project management"` |
+| **Online stores** | `/audit https://store.com` then `/schema https://store.com/product` |
+| **Blogs and content sites** | `/content-decay "client"` then `/score-page https://blog.com/post "keyword"` |
+
+---
+
+## Works In Any Editor
+
+| Editor | How to use |
+|--------|-----------|
+| **Terminal** (Mac/Windows/Linux) | Open terminal, type `claude`, then use commands |
+| **VS Code** | Open the built-in terminal (`` Ctrl+` ``), type `claude` |
+| **Cursor** | Open the built-in terminal (`` Ctrl+` ``), type `claude` |
+| **Windsurf** | Open the built-in terminal (`` Ctrl+` ``), type `claude` |
+| **Any editor with a terminal** | Same — open terminal, type `claude` |
+
+---
+
+## Managing Multiple Clients
+
+This plugin is built for agencies. You can manage as many clients as you need:
+
+```
+/new-client "Joe's Plumbing"
+/new-client "Austin Dental Care"
+/new-client "TechStart SaaS"
+```
+
+Each client gets their own folder with all their data:
+- Keyword research
+- Audit results
+- Content scores
+- GBP posts
+- Backlink data
+- Monthly reports
+
+Switch between clients by using their name in any command:
+
+```
+/audit https://joesplumbing.com
+/report "joes-plumbing"
+/gbp-calendar "austin-dental-care"
+/keywords "saas analytics" --saas
+```
+
+---
+
+## What's Inside (6 Skill Areas)
+
+### 1. Keyword Strategy
+Find keywords that bring revenue, not just traffic. Different workflows for local businesses vs online companies. Includes competitor analysis, keyword grouping, and content planning.
+
+### 2. Technical SEO Audit
+Full website health check: page speed, mobile-friendliness, broken links, missing tags, schema markup, security headers, and 10+ other checks. Scored 0-100 with prioritized fixes.
+
+### 3. Content Optimization
+Score any page's SEO across 10 categories. Check readability, E-E-A-T (Google's quality signals), heading structure, keyword usage, image optimization, and more. Includes a pre-publish checklist for new content.
+
+### 4. Local SEO
+Everything for Google Business Profile: competitor research, post generation, 30-day posting calendars, review response templates, citation audits, and local keyword optimization.
+
+### 5. Backlinks & Reporting
+Reverse-engineer competitor backlinks into a 90-day outreach plan. Find toxic links, discover unlinked brand mentions, and generate professional monthly reports.
+
+### 6. AI Search Optimization (AEO)
+The newest frontier. Optimize your content to appear in Google AI Overviews, Perplexity answers, and ChatGPT responses. Includes entity optimization, structured data for AI, and brand SERP management.
+
+---
+
+## Frequently Asked Questions
+
+**Do I need to know SEO to use this?**
+No. Just type the commands and Claude explains everything in plain language with specific action items.
+
+**Does this cost money?**
+The plugin itself is free and open source. You need a Claude Code subscription and a Firecrawl account (has a free tier).
+
+**Can I use this for client work?**
+Yes, it's built specifically for agencies managing multiple clients. Each client's data is kept separate.
+
+**Does it actually change my website?**
+No. It only analyzes and recommends. You (or your developer) make the actual changes.
+
+**What websites can it analyze?**
+Any public website. It works with WordPress, Shopify, Wix, custom sites — anything with a URL.
+
+**How is this different from Semrush or Ahrefs?**
+Those are subscription tools ($100-400/month). This plugin uses AI to perform similar analysis for free using publicly available data. It won't have exact search volume numbers, but it provides volume estimates and everything else you need.
+
+---
 
 ## License
 
-MIT
+MIT — free to use, modify, and share.
 
 ## Contributing
 
-Contributions welcome. Please open an issue or pull request on [GitHub](https://github.com/mangollc/claude-seo-skill).
+Found a bug or have an idea? Open an issue or pull request on [GitHub](https://github.com/mangollc/claude-seo-skill).
