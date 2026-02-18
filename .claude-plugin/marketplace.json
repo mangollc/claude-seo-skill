@@ -13,7 +13,7 @@
       "author": {
         "name": "mangollc"
       },
-      "source": ".",
+      "source": "./plugins/seo-aeo",
       "category": "productivity"
     }
   ]
