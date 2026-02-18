@@ -1,0 +1,11 @@
+{
+  "name": "claude-seo-skill",
+  "description": "Comprehensive SEO and AEO (AI Engine Optimization) plugin for agencies",
+  "plugins": {
+    "seo-aeo": {
+      "name": "seo-aeo",
+      "description": "Comprehensive SEO and AI search optimization toolkit for agencies. Keyword research, technical audits, content optimization, local SEO, backlink analysis, and AEO.",
+      "path": "."
+    }
+  }
+}
