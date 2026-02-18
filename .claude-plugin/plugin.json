@@ -3,8 +3,9 @@
   "description": "Comprehensive SEO and AI search optimization toolkit for agencies. Keyword research, technical audits, content optimization, local SEO, backlink analysis, and AEO (AI Engine Optimization). Multi-client support with structured data output.",
   "version": "1.0.0",
   "author": {
-    "name": "SEO Agency"
+    "name": "mangollc"
   },
+  "repository": "https://github.com/mangollc/claude-seo-skill",
   "license": "MIT",
   "keywords": [
     "seo",
@@ -19,6 +20,13 @@
     "google-business-profile",
     "agency"
   ],
-  "skills": "./skills/",
+  "skills": [
+    "./skills/seo-keywords",
+    "./skills/seo-technical-audit",
+    "./skills/seo-content",
+    "./skills/seo-local",
+    "./skills/seo-backlinks",
+    "./skills/seo-aeo"
+  ],
   "commands": "./commands/"
 }
