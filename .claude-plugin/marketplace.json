@@ -1,11 +1,20 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-seo-skill",
   "description": "Comprehensive SEO and AEO (AI Engine Optimization) plugin for agencies",
-  "plugins": {
-    "seo-aeo": {
+  "owner": {
+    "name": "mangollc"
+  },
+  "plugins": [
+    {
       "name": "seo-aeo",
       "description": "Comprehensive SEO and AI search optimization toolkit for agencies. Keyword research, technical audits, content optimization, local SEO, backlink analysis, and AEO.",
-      "path": "."
+      "version": "1.0.0",
+      "author": {
+        "name": "mangollc"
+      },
+      "source": ".",
+      "category": "productivity"
     }
-  }
+  ]
 }
