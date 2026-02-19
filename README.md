@@ -199,6 +199,68 @@ You'll get:
 
 ---
 
+## 🔥 Enhanced AEO Discovery (`/enhance-aeo`)
+
+**The most powerful command in the plugin.** This is how you find out what real people are asking AI chatbots — and make sure AI engines cite YOU in the answers.
+
+### The Problem
+
+You can't see what people ask ChatGPT, Perplexity, or Google AI. Those platforms don't share query data. So how do you optimize for something you can't measure?
+
+### The Solution
+
+People ask AI chatbots the same questions they search on Google, ask on Reddit, and type into Quora. `/enhance-aeo` mines ALL of those sources to reverse-engineer what people are asking AI — then tests whether you show up in AI answers.
+
+### How to Run It
+
+```
+/enhance-aeo "client-name" "your main topic"
+```
+
+### What It Runs (5 Modules)
+
+| Module | What it does | Why it matters |
+|--------|-------------|----------------|
+| **1. PAA Chain Mining** | Mines Google's "People Also Ask" boxes using what/how/why/vs patterns | PAA questions = the exact questions people ask ChatGPT and Perplexity |
+| **2. Autocomplete Mining** | Scrapes Google autocomplete with 7 modifiers (how, best, for, can, should, is, a) | Autocomplete = real-time search behavior = what people type into AI chatbots |
+| **3. Reddit & Quora Mining** | Finds actual questions on Reddit threads and Quora answers | LLMs are literally trained on this data — these questions ARE AI queries |
+| **4. Question Tree Mapping** | Builds a full who/what/when/where/which/why map around your topic | Covers every angle people approach your topic from |
+| **5. AI Visibility Testing** | Tests your top 20 keywords — checks if AI Overviews appear, if you're cited, who IS cited | Shows exactly where you're invisible to AI and why competitors win |
+
+### What You Get Back
+
+**Master Question List**
+- Every question people ask about your topic — deduplicated across all 5 sources
+- Ranked by frequency (appeared in multiple sources = highest priority)
+- Tagged: source (PAA/Autocomplete/Reddit/Quora), intent (informational/commercial), status (answered on your site or not)
+
+**AI Visibility Scorecard**
+
+| Keyword | AI Overview? | You Cited? | Who's Cited Instead | Gap Level |
+|---------|-------------|------------|---------------------|-----------|
+| best plumber austin | Yes | No | competitor1.com | 🔴 High |
+| emergency plumber near me | Yes | Yes | — | 🟢 None |
+| plumber cost austin | No | — | — | ⚪ No AI Overview |
+
+**Competitor Analysis**
+- Which competitors get cited by AI and why
+- What their content structure looks like vs yours
+- Schema markup differences
+- Content depth differences
+
+**Priority Action Plan**
+1. Top 10 questions to create content for (not yet answered on your site)
+2. Top 5 pages to restructure for AI citation
+3. Schema markup to add
+4. Content gaps where competitors dominate AI results
+5. Reddit/Quora communities to participate in for brand visibility
+
+### No API Keys Needed
+
+Everything runs on Firecrawl search — no Google Search Console, no Ahrefs, no paid tools. Just install and run.
+
+---
+
 ## Works With Any Business Type
 
 | Business Type | Example Commands |
