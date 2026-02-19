@@ -6,14 +6,17 @@ description: |
   optimization, brand authority signals, brand SERP management.
 
   USE FOR:
-  - "AI search", "AEO", "AI overview", "AI optimization"
-  - "answer engine optimization", "AI engine optimization"
+  - "AI search", "AEO", "GEO", "AI overview", "AI optimization"
+  - "answer engine optimization", "AI engine optimization", "generative engine optimization"
   - "Perplexity", "ChatGPT visibility", "AI citations"
   - "Google AI Overview", "SGE", "search generative experience"
   - "entity optimization", "knowledge graph", "knowledge panel"
   - "FAQ schema", "structured data for AI"
   - "brand mentions", "authority signals", "brand SERP"
   - "brand search results", "what shows when you Google us"
+  - "enhance AEO", "what people ask AI", "LLM queries", "AI question discovery"
+  - "people also ask", "autocomplete mining", "Reddit questions", "Quora questions"
+  - "AI visibility testing", "AI citation testing"
 
   Uses firecrawl to analyze AI search results and competitor AI visibility.
   Multi-client: stores results in .seo/clients/{client}/aeo/
@@ -32,8 +35,18 @@ aeo/
 ├── entity-optimization.json          # Entity and authority audit
 ├── brand-serp-{date}.json            # Brand SERP analysis
 ├── structured-data-audit.json        # AI-focused schema audit
-└── aeo-checklist-results/
-    └── {url-slug}-aeo.json           # Per-page AEO scores
+├── enhance-aeo-{date}.json           # Enhanced AEO discovery results
+├── question-master-list.json         # All discovered questions (deduplicated)
+├── ai-visibility-scorecard.json      # Keyword-by-keyword AI test results
+├── aeo-checklist-results/
+│   └── {url-slug}-aeo.json           # Per-page AEO scores
+└── .firecrawl/
+    ├── paa-*.json                    # People Also Ask results
+    ├── auto-*.json                   # Autocomplete mining results
+    ├── reddit-*.json                 # Reddit question mining results
+    ├── quora-*.json                  # Quora question mining results
+    ├── atp-*.json                    # AnswerThePublic-style question map
+    └── ai-test-*.json                # AI visibility test results
 ```
 
 ## Understanding AI Search Engines
@@ -315,3 +328,92 @@ For each important page, score against these AI-readiness factors:
 **Total: 100 points**
 
 Grade: A (85-100), B (70-84), C (55-69), D (40-54), F (< 40)
+
+---
+
+## Enhanced AEO Discovery (AI Question Discovery)
+
+The `/enhance-aeo` command runs 5 deep-discovery modules to find what real people are asking AI engines about your topic, and tests how visible you are in AI-generated answers. No API keys needed — uses Firecrawl search to mine publicly available data.
+
+### Why This Matters
+
+LLMs learn from and cite the same content that appears in:
+- Google's "People Also Ask" boxes
+- Google autocomplete suggestions
+- Reddit threads and Quora answers
+- FAQ-style content across the web
+
+By mining these sources, you discover the exact questions people ask AI chatbots — and can create content that AI engines will cite.
+
+### Module 1: People Also Ask (PAA) Chain Mining
+
+PAA questions are the strongest proxy for LLM queries. Google shows these because people commonly ask them — the same people then ask ChatGPT, Perplexity, etc.
+
+Search patterns:
+- `{keyword}` — direct PAA boxes
+- `what is {keyword}` — definitional questions
+- `how to {keyword}` — procedural questions
+- `why {keyword}` — reasoning questions
+- `{keyword} vs` — comparison questions
+
+Extract and deduplicate all PAA questions, group by intent.
+
+### Module 2: Google Autocomplete Mining
+
+Autocomplete reflects real-time search behavior. Patterns:
+- `{keyword} + [a, how, best, for, can, should, is]`
+
+Cross-reference with PAA results — overlapping questions are highest priority.
+
+### Module 3: Reddit & Quora Question Mining
+
+These platforms are where real people ask real questions in natural language — the same format they use with AI chatbots. LLMs are also trained on this data.
+
+Search patterns:
+- `site:reddit.com {keyword}` — Reddit threads
+- `site:quora.com {keyword}` — Quora questions
+- `reddit {keyword} recommendations` — Purchase intent
+- `reddit best {keyword}` — Comparison intent
+
+Extract: thread titles (= questions), top-voted answers (= what AI learns from), brand mentions, pain points, decision criteria.
+
+### Module 4: AnswerThePublic-Style Question Mapping
+
+Build a complete question tree using all question word variations:
+- who, what, when, where, which, without, with, near me
+
+Creates a visual question map showing all angles people approach the topic from.
+
+### Module 5: Automated AI Visibility Testing
+
+Systematically test each of the client's top keywords (up to 20):
+
+For each keyword:
+1. Search via Firecrawl, check results for AI Overview presence
+2. Check if client is cited in AI features
+3. Identify which competitors ARE cited
+4. Scrape top-cited competitor pages
+5. Reverse-engineer WHY they get cited (structure, schema, depth, FAQ sections, author credentials)
+
+Output an AI Visibility Scorecard:
+
+| Keyword | AI Overview? | You Cited? | Top Cited | Gap |
+|---------|-------------|------------|-----------|-----|
+| kw1 | Yes/No | Yes/No | competitor | High/Med/Low |
+
+### Master Question List
+
+After all 5 modules complete, compile a deduplicated master list:
+- Total unique questions across all sources
+- Ranked by frequency (appeared in multiple modules = higher priority)
+- Tagged with source: PAA, Autocomplete, Reddit, Quora, Question Map
+- Tagged with intent: Informational, Commercial, Navigational, Transactional
+- Tagged with status: Answered on your site / Not answered / Partially answered
+
+### Action Plan Output
+
+1. Top 10 questions to create content for (highest frequency, not yet answered)
+2. Top 5 existing pages to restructure for AI citation
+3. Schema markup additions needed
+4. Content gaps where competitors dominate AI results
+5. Reddit/Quora communities to participate in for brand visibility

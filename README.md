@@ -115,6 +115,7 @@ Just type any command. Here are the most popular ones:
 |-----------|-------------|
 | `/aeo-check "Your Brand" "keyword1" "keyword2"` | Check if your brand shows up in AI search results (Google AI, Perplexity, ChatGPT) |
 | `/brand-serp "Your Brand"` | See what appears when someone Googles your brand name |
+| `/enhance-aeo "client-name" "topic"` | Deep AI question discovery — find what people ask LLMs, test AI visibility across all keywords, mine Reddit/Quora/PAA |
 
 ### Reporting
 
@@ -181,6 +182,18 @@ You'll get:
 - Whether your brand appears in Google AI Overviews
 - Which competitors show up instead
 - What to change so AI search engines recommend you
+
+### "I want to know what people are asking AI chatbots about my industry"
+
+```
+/enhance-aeo "joes-plumbing" "emergency plumber"
+```
+
+You'll get:
+- Every question people ask about your topic (mined from Google PAA, autocomplete, Reddit, and Quora)
+- Which of your keywords trigger AI Overviews and whether you're cited
+- Which competitors AI engines cite instead — and why
+- A priority action plan: top questions to answer, pages to restructure, content gaps to fill
 
 ---
 
@@ -254,7 +267,7 @@ Everything for Google Business Profile: competitor research, post generation, 30
 Reverse-engineer competitor backlinks into a 90-day outreach plan. Find toxic links, discover unlinked brand mentions, and generate professional monthly reports.
 
 ### 6. AI Search Optimization (AEO)
-The newest frontier. Optimize your content to appear in Google AI Overviews, Perplexity answers, and ChatGPT responses. Includes entity optimization, structured data for AI, and brand SERP management.
+The newest frontier. Optimize your content to appear in Google AI Overviews, Perplexity answers, and ChatGPT responses. Includes entity optimization, structured data for AI, brand SERP management, and **Enhanced AEO Discovery** — mines real questions people ask AI chatbots from Google PAA, autocomplete, Reddit, and Quora, then tests your AI visibility keyword-by-keyword.
 
 ---
 
