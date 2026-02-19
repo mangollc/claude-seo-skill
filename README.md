@@ -1,5 +1,7 @@
 # SEO AEO Pro
 
+> **Last updated: February 19, 2026**
+
 Your AI-powered SEO assistant. Just type simple commands and get professional-grade SEO analysis, keyword research, content scoring, and more — no SEO expertise required.
 
 Works with any website. Built for agencies managing multiple clients.
