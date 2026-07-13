@@ -1,6 +1,6 @@
 ---
 description: Run keyword research for a topic or URL with clustering and intent mapping
-argument-hint: [topic or url] [--local|--saas]
+argument-hint: "[topic or url] [--local|--saas]"
 ---
 
 # Keyword Research

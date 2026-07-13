@@ -1,6 +1,6 @@
 ---
 description: Deep AI search discovery — mine real questions people ask LLMs, test your keywords across AI engines, and find AEO gaps competitors miss
-argument-hint: [client-name or domain] [topic or keywords...]
+argument-hint: "[client-name or domain] [topic or keywords...]"
 ---
 
 # Enhanced AEO Discovery

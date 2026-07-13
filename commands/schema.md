@@ -1,6 +1,6 @@
 ---
 description: Generate valid JSON-LD structured data for a page
-argument-hint: [url] [schema-type]
+argument-hint: "[url] [schema-type]"
 ---
 
 # Generate JSON-LD Schema

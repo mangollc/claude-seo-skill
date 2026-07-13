@@ -1,6 +1,6 @@
 ---
 description: Score a page's on-page SEO (0-100) with actionable fixes
-argument-hint: [url] [target-keyword]
+argument-hint: "[url] [target-keyword]"
 ---
 
 # Score Page

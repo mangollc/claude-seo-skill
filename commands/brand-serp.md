@@ -1,6 +1,6 @@
 ---
 description: Analyze and optimize what appears when someone searches your brand name
-argument-hint: [brand-name]
+argument-hint: "[brand-name]"
 ---
 
 # Brand SERP Analysis
