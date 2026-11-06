@@ -1,6 +1,6 @@
 ---
 description: Check a brand's visibility in AI search engines (Google AI Overview, Perplexity, ChatGPT)
-argument-hint: [brand-name or domain] [target-queries...]
+argument-hint: "[brand-name or domain] [target-queries...]"
 ---
 
 # AEO Check

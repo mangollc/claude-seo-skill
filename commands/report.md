@@ -1,6 +1,6 @@
 ---
 description: Generate a monthly SEO report for a client from all collected data
-argument-hint: [client-name] [month]
+argument-hint: "[client-name] [month]"
 ---
 
 # Monthly Report

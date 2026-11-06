@@ -1,6 +1,6 @@
 ---
 description: Detect stale or declining content that needs refreshing with priority ranking
-argument-hint: [client-name]
+argument-hint: "[client-name]"
 ---
 
 # Content Decay Detection

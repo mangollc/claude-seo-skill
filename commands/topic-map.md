@@ -1,6 +1,6 @@
 ---
 description: Build a topical authority map with pillar pages and cluster content architecture
-argument-hint: [client-name] [topic]
+argument-hint: "[client-name] [topic]"
 ---
 
 # Topical Authority Map

@@ -1,6 +1,6 @@
 ---
 description: Show how a page appears in Google search results with rich snippet eligibility
-argument-hint: [url]
+argument-hint: "[url]"
 ---
 
 # SERP Preview

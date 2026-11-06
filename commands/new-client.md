@@ -1,6 +1,6 @@
 ---
 description: Set up a new client profile for multi-client SEO tracking
-argument-hint: [client-name]
+argument-hint: "[client-name]"
 ---
 
 # New Client Setup

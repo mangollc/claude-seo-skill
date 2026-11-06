@@ -1,6 +1,6 @@
 ---
 description: Generate a 30-day Google Business Profile posting calendar with ready-to-publish posts
-argument-hint: [client-name]
+argument-hint: "[client-name]"
 ---
 
 # GBP Calendar

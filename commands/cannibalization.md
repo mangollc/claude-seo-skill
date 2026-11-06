@@ -1,6 +1,6 @@
 ---
 description: Find pages on the same site competing for the same keywords with fix recommendations
-argument-hint: [client-name]
+argument-hint: "[client-name]"
 ---
 
 # Cannibalization Detection

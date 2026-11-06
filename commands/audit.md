@@ -1,6 +1,6 @@
 ---
 description: Run a full technical SEO audit on a website with prioritized fix list
-argument-hint: [url]
+argument-hint: "[url]"
 ---
 
 # Technical SEO Audit
